@@ -87,6 +87,13 @@ except Exception as e:
 # -------------------------------
 # API ROUTE
 # -------------------------------
+@app.route("/", methods=["GET"])
+def home():
+    return jsonify({
+        "status": "running",
+        "message": "Coral Health Detection API is live."
+    })
+
 @app.route('/predict', methods=['POST'])
 def predict():
     if 'file' not in request.files:

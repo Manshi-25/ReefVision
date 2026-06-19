@@ -10,3 +10,6 @@ all_models/best_resnet50_model.h5
 data/
 *.tar.gz
 *.zip
+*.h5
+*.pkl
+*.csv

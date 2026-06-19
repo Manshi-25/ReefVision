@@ -29,9 +29,25 @@ efficientNet_model_path = BASE_DIR / "all_models/models/saved_model/efficientnet
 # -------------------------------
 # LAZY MODEL LOADING (IMPORTANT)
 # -------------------------------
+print("BASE_DIR:", BASE_DIR)
+print("CNN:", cnn_model_path)
+print("CNN exists:", cnn_model_path.exists())
+
+print("ResNet:", resnet_model_path)
+print("ResNet exists:", resnet_model_path.exists())
+
+print("DenseNet:", densenet_model_path)
+print("DenseNet exists:", densenet_model_path.exists())
+
+print("EfficientNet:", efficientNet_model_path)
+print("EfficientNet exists:", efficientNet_model_path.exists())
+
 models = {}
 
 def load_tflite_model(model_path):
+    if not model_path.exists():
+        raise FileNotFoundError(f"Model not found: {model_path}")
+
     interpreter = Interpreter(model_path=str(model_path))
     interpreter.allocate_tensors()
     return interpreter
@@ -118,7 +134,7 @@ def predict():
         else:
             input_size = (128, 128)
 
-        image = Image.open(file.stream)
+        image = Image.open(file.stream).convert("RGB")
         image = preprocess_image(image, input_size)
 
         prediction = predict_with_tflite(interpreter, image)
@@ -140,7 +156,7 @@ def predict():
         result = "Healthy" if class_index == 1 else "Bleached"
 
         # save to mongo
-        if collection:
+        if collection is not None:
             collection.insert_one({
                 "model": model_type,
                 "result": result,

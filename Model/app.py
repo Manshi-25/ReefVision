@@ -21,10 +21,10 @@ port = int(os.environ.get("PORT", 10000))
 # -------------------------------
 BASE_DIR = Path(__file__).resolve().parent
 
-cnn_model_path = BASE_DIR / "Model/all_models/cnn_model_TFL.tflite"
-resnet_model_path = BASE_DIR / "Model/all_models/resnet50_model_TFL.tflite"
-densenet_model_path = BASE_DIR / "Model/all_models/densenet_model_TFL.tflite"
-efficientNet_model_path = BASE_DIR / "Model/all_models/models/saved_model/efficientnet_float32.tflite"
+cnn_model_path = BASE_DIR / "all_models/cnn_model_TFL.tflite"
+resnet_model_path = BASE_DIR / "all_models/resnet50_model_TFL.tflite"
+densenet_model_path = BASE_DIR / "all_models/densenet_model_TFL.tflite"
+efficientNet_model_path = BASE_DIR / "all_models/models/saved_model/efficientnet_float32.tflite"
 
 # -------------------------------
 # LAZY MODEL LOADING (IMPORTANT)

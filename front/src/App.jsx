@@ -7,6 +7,10 @@ function App() {
   const [image, setImage] = useState(null);
   const [webcamStream, setWebcamStream] = useState(null);
   const videoRef = useRef(null);
+  const width = window.innerWidth;
+
+const isMobile = width <= 768;
+const isTablet = width > 768 && width <= 1024;
 
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
@@ -55,11 +59,6 @@ function App() {
     <div className="app-container">
       <header className="header">
         <h1 >Coral Reef Health Detection</h1>
-        <div className="header-buttons">
-          <button className="login-button" onClick={() => openModal('Login')}>Login</button>
-          <button className="register-button" onClick={() => openModal('Register')}>Register</button>
-          <button className="contact-button">Contact Us</button>
-        </div>
       </header>
 
       <main className="main-content">
@@ -102,7 +101,7 @@ function App() {
       </main>
  
       <footer className="footer">
-        <p>&copy; 2024 Coral Reef Health Detection</p>
+        <p>&copy; 2026 Coral Reef Health Detection</p>
       </footer>
 
       {/*{isModalOpen && (

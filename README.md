@@ -22,7 +22,7 @@ GET /
 
 POST /predict
 
-###📖 Project Showcase: View on Notion
+### 📖 Project Showcase: View on Notion
 
 https://health-of-corals.notion.site/Coral-Health-Detection-38740f75a17a80a4ae36ccf5d3d0aa61
 

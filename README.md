@@ -1,4 +1,4 @@
-# 🌊 **ReefVision **: Coral Health Detection using Deep Learning
+# 🌊 ReefVision: Coral Health Detection using Deep Learning
 
 A full-stack web application that detects the health status of coral reefs from underwater images using multiple deep learning models. Users can upload an image, select a trained model, and receive predictions indicating whether the coral is **Healthy** or **Bleached**, along with the prediction confidence.
 

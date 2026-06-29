@@ -1,4 +1,4 @@
-# 🌊 Coral Health Detection using Deep Learning
+# 🌊 **ReefVision **: Coral Health Detection using Deep Learning
 
 A full-stack web application that detects the health status of coral reefs from underwater images using multiple deep learning models. Users can upload an image, select a trained model, and receive predictions indicating whether the coral is **Healthy** or **Bleached**, along with the prediction confidence.
 
@@ -8,7 +8,7 @@ A full-stack web application that detects the health status of coral reefs from 
 
 ### 🌐 Frontend (Vercel)
 
-https://coral-health-detection.vercel.app
+https://reefvision.vercel.app
 
 ### ⚙️ Backend API (Render)
 
@@ -24,7 +24,7 @@ POST /predict
 
 ### 📖 Project Showcase: View on Notion
 
-https://health-of-corals.notion.site/Coral-Health-Detection-38740f75a17a80a4ae36ccf5d3d0aa61
+https://reefvision.notion.site/ReefVision-38740f75a17a80a4ae36ccf5d3d0aa61
 
 ---
 
